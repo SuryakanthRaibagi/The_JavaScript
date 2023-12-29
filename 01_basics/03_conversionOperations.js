@@ -61,5 +61,6 @@ let str03 = str01 + str02
 // 32
 
 let gameCounter =100
-++gameCounter
-console.log();
+// ++gameCounter
+gameCounter++
+console.log(gameCounter);
