@@ -18,7 +18,7 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 // const BigInt = 1n
 
@@ -37,4 +37,29 @@ const myFunction = function(){
     console.log("hello surya");
 }
 
-console.log(typeof myFunction);
+// console.log(typeof myFunction);
+
+
+//____________________________________________________________________
+
+//Stack(Primitive):gives a copy, Heap(Non-Premitive):gives a reference original value also changes
+
+let myname="surya"
+
+let anothername=myname
+anothername="suryakanth"
+
+console.log(myname);
+console.log(anothername);
+
+let user={
+    email:"surya@gmail.com",
+    upi:"user_o1"
+}
+
+let usertwo=user
+
+usertwo.email="yamraj@gmail.com"
+
+console.log(user.email);
+console.log(usertwo.email);
