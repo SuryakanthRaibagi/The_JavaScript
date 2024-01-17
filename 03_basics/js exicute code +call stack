@@ -1,0 +1,48 @@
+/*js exicution context:how js exicutes
+                        it has 2 phases 
+                        1:global EC(Exicution context) becouse js is single threaded 
+                        ex:this(window object in windows)
+                        2:Function EC /Functional EC
+                        3:Eval EC in mangoos
+
+
+phase 1-memory creation phase or creation phase(memory allocation is done)
+phase 2- exicution phase
+1:global exicution allocated in this
+2:creation phase/ Memory phase(collect all varibale and store it )
+    val1->undefined
+    val2->undefined
+    addNum->function defination
+    result1->undefined 
+    result2->undefined 
+    1st cycle is complet
+3:exicution Phase 
+val1<-10
+val2<-5
+
+addNum ->craetes a different EC
+                    new variable environment + Execution thread
+                        New phase are created and after using once it gets deleted  
+                        1:Memory Phase : val1->undefined  val2->undefined  total->undefined
+                        2:exicution context :num1->10  num2->5 total ->15
+                        total is also returning back to parent to globle EC
+
+Example
+let val1=10
+let val2=5
+function addNum(num1,num2){
+    let total= num1 + num2 
+    return total
+}
+let result1= addNum(val1,val2)
+let result2=addNum(10,2)
+
+
+
+
+
+
+Call stack:
+
+work as stack LIFO based exicution
+*/
