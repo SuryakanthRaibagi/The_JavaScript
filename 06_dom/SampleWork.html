@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>3 huduguru</title>
+  <style>
+    .deletebtn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li>
+    <input type="checkbox" id="item1" onchange="toggleDeleteButton('item1')">
+    <label>Rohit</label>
+    <button class="deletebtn" id="deletebtn_item1" onclick="deleteItem('item1')">Delete</button>
+  </li>
+
+  <li>
+    <input type="checkbox" id="item2" onchange="toggleDeleteButton('item2')">
+    <label>Sant</label>
+    <button class="deletebtn" id="deletebtn_item2" onclick="deleteItem('item2')">Delete</button>
+  </li>
+
+  <li>
+    <input type="checkbox" id="item3" onchange="toggleDeleteButton('item3')">
+    <label>Surya</label>
+    <button class="deletebtn" id="deletebtn_item3" onclick="deleteItem('item3')">Delete</button>
+  </li>
+</ul>
+
+<script>
+  function toggleDeleteButton(itemId) {
+    const deleteBtn = document.getElementById(`deletebtn_${itemId}`);
+    deleteBtn.style.display = document.getElementById(itemId).checked ? "inline-block" : "none";
+  }
+
+  function deleteItem(itemId) {
+    const listItem = document.getElementById(itemId).parentNode;
+    listItem.parentNode.removeChild(listItem);
+  }
+</script>
+</body>
+
+</html>
